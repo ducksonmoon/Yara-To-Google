@@ -19,3 +19,8 @@ python3 yara
 
 By default, this program adds events to your **primary** google calendar, if you want to add them to a specific google calendar, 
 simply add the appropriate **calendar id** to the **CALENDAR_ID** file.
+
+
+## Note
+
+This program only works for [Yara Platform!](www.yara.mazust.ac.ir).
