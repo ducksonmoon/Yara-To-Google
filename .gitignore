@@ -145,3 +145,6 @@ cython_debug/
 
 # Google Token
 token.pickle
+
+# DS
+.DS_Store

@@ -1,8 +1,9 @@
 import os
+from os.path import dirname, abspath
 
-DIR = os.path.dirname(os.path.realpath(__file__))
-DIR_FILE = f'{DIR}/fields'
 
+DIR = dirname(dirname(dirname(abspath(__file__))))
+DIR_FILE = f'{DIR}/FIELDS'
 
 def chaeck_data():
     with open(DIR_FILE, 'r+') as f:
