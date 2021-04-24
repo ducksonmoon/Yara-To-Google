@@ -23,4 +23,4 @@ simply add the appropriate **calendar id** to the **CALENDAR_ID** file.
 
 ## Note
 
-This program only works for [Yara Platform!](https://yara.mazust.ac.ir).
+This program only works for [Yara Platform](https://yara.mazust.ac.ir).
