@@ -1,8 +1,9 @@
 from cal_setup import get_calendar_service
 import datetime
-import os
+from os.path import dirname, abspath
 
-DIR = os.path.dirname(os.path.realpath(__file__))
+
+DIR = dirname(dirname(dirname(abspath(__file__))))
 TEXT_DIR = f'{DIR}/CALENDAR_ID'
 name = open(TEXT_DIR).readline()
 
