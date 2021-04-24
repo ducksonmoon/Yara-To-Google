@@ -14,3 +14,8 @@ cd Yara-To-Google
 pip3 install -r requirements.txt
 python3 yara
 ~~~~~~~~
+
+### Customize
+
+By default, this program adds events to your **primary** google calendar, if you want to add them to a specific google calendar, 
+simply add the appropriate **calendar id** to the **CALENDAR_ID** file.
