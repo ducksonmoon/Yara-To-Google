@@ -3,7 +3,7 @@ import datetime
 import os
 
 DIR = os.path.dirname(os.path.realpath(__file__))
-TEXT_DIR = f'{DIR}/calender_id.txt'
+TEXT_DIR = f'{DIR}/calendar_id.txt'
 name = open(TEXT_DIR).readline()
 
 def create(body):
