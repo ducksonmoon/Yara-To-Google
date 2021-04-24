@@ -1,6 +1,8 @@
 from core import baddyrequest
 from core.data import Data
 from jdate import conv
+from user import manager
+
 from google_calendar.create_event import create, list_events_summary
 from ast import literal_eval
 import datetime
@@ -12,9 +14,10 @@ def main():
         "This is only for personal use."
     )
 
-    username = input("input username: ")
-    password = input("input password: ")
-
+    user = manager.chaeck_data()
+    user_seprate = manager.spilit_data(user)
+    username = user_seprate[0]
+    password = user_seprate[1]
 
     data = Data()  # data contains urls and params
     now = datetime.datetime.now()  # Now datetime
@@ -34,12 +37,11 @@ def main():
     lessons = literal_eval(lessons)
     lessons = lessons[0]['Lessons']
 
-    number_lessons = len(lessons)
+    # number_lessons = len(lessons)
 
     for les in lessons:
         number = les['GroupID']
-        practice_url = \
-            f'https://yaraapi.mazust.ac.ir/api/practices/actives/{number}'
+        practice_url = f"https://yaraapi.mazust.ac.ir/api/practices/actives/{number}"
         practices = baddyrequest.send(data, practice_url, token)
 
         for prac in practices:
@@ -77,7 +79,7 @@ def main():
                 "summary": f"{les['LessonTitle']} - {title}",
                 "description": description,
                 "start": {"dateTime": start_datetime.isoformat(),
-                        "timeZone": 'Asia/Tehran'},
+                          "timeZone": 'Asia/Tehran'},
                 "end": {"dateTime": finish_datetime.isoformat(),
                         "timeZone": 'Asia/Tehran'},
             }
