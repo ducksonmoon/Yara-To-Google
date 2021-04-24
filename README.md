@@ -26,7 +26,7 @@ First time that you have enter your username and password we save it in fileds f
 you can change it by editing this file as this schema:
 ~~~~~~~
     username:password
-    example:
+    example ->
     98121021:mypassword123
 ~~~~~~~
 ## Note
