@@ -12,7 +12,7 @@ def create(body):
     service = get_calendar_service()
     # If have any specific calendar just replace calendar id with primary
     event_result = service.events().insert(
-        calendarId=f'name', body=body
+        calendarId=f'{name}', body=body
     ).execute()
 
     print("created event")
