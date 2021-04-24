@@ -35,6 +35,5 @@ def list_events_summary():
 
     if not events:
         print('No upcoming events found.')
-    for event in events:
-        event_list = [new_event['summary'] for new_event in events]
+    event_list = [new_event['summary'] for new_event in events]
     return event_list
