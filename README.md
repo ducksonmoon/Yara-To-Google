@@ -9,10 +9,10 @@ The funny thing is, i was lazy as hell and I didn't want to check my university'
 ## What do I need to do?
 
 ~~~~~~~~
-  git clone https://github.com/M-b850/Yara-To-Google.git
-  cd Yara-To-Google
-  pip3 install -r requirements.txt
-  python3 yara
+>>> git clone https://github.com/M-b850/Yara-To-Google.git
+>>> cd Yara-To-Google
+>>> pip3 install -r requirements.txt
+>>> python3 yara
 ~~~~~~~~
 
 ## Customize
